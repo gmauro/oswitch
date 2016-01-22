@@ -118,7 +118,6 @@ MSG
   def dockerfile_data
     data = ["FROM #{package}"]
     data << 'COPY _switch /'
-    data << 'COPY wheel /etc/sudoers.d/'
     data << "RUN /_switch #{userargs} 2>&1"
     data << 'ENV LC_ALL en_US.UTF-8'
     data << "USER #{username}"

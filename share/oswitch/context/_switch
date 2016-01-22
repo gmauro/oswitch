@@ -84,6 +84,13 @@ fi
 # create the user, without password, keeping the same uid as the host. Will
 # set newly created user as the current user in container.
 
+cat <<EOT >> /etc/sudoers
+
+# Allow members of group wheel to execute any command without password
+%wheel         ALL = (ALL) NOPASSWD: ALL
+EOT
+
+
 echo
 echo "Creating user $user with uid $uid ..."
 groupadd -f wheel

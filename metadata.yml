@@ -41,7 +41,6 @@ files:
 - README.mkd
 - bin/oswitch
 - context/_switch
-- context/wheel
 - lib/oswitch.rb
 - oswitch.gemspec
 homepage: https://github.com/yeban/oswitch
